@@ -14,6 +14,7 @@ namespace Todo
 			database.CreateTableAsync<TodoItem>().Wait();
 		}
 
+
 		public Task<List<TodoItem>> GetItemsAsync()
 		{
 			return database.Table<TodoItem>().ToListAsync();
